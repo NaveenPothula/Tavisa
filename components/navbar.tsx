@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white fixed inset-x-0 z-10 shadow-md px-4 md:px-10">
-      <div className="container mx-auto  py-2 flex items-center">
+      <div className="container ml-0  py-2 flex items-center">
         {/* Logo */}
         <div className="flex-shrink-0">
           <Image
@@ -28,13 +28,13 @@ export default function Navbar() {
         </div>
 
         {/* Navigation Links */}
-        <div className="flex-grow flex items-center justify-between md:ml-6">
-          <div className="hidden md:flex flex-1 items-center justify-between space-x-1">
+        <div className="flex-grow flex items-center justify-between md:ml-6 mr-0">
+          <div className="hidden md:flex flex-1 items-center justify-between px-0">
             {" "}
             {/* Reduced space between links */}
             <Link
               href="/"
-              className={`text-center px-2 py-2 ${
+              className={`text-center text-sm px-2 py-2 ${
                 // Reduced padding
                 pathname === "/" ? "text-yellow-500" : "text-gray-800"
               }`}
@@ -43,7 +43,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/who-are-we"
-              className={`text-center px-2 py-2 ${
+              className={`text-center px-2 py-2 text-sm ${
                 // Reduced padding
                 pathname === "/who-are-we" ? "text-yellow-500" : "text-gray-800"
               }`}
@@ -52,7 +52,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/symptoms"
-              className={`text-center px-2 py-2 ${
+              className={`text-center px-2 py-2 text-sm ${
                 // Reduced padding
                 pathname === "/symptoms" ? "text-yellow-500" : "text-gray-800"
               }`}
@@ -61,7 +61,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/how-we-treat"
-              className={`text-center px-2 py-2 ${
+              className={`text-center px-2 py-2 text-sm ${
                 // Reduced padding
                 pathname === "/how-we-treat"
                   ? "text-yellow-500"
@@ -72,7 +72,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/learn"
-              className={`text-center px-2 py-2 ${
+              className={`text-center px-2 py-2 text-sm ${
                 // Reduced padding
                 pathname === "/learn" ? "text-yellow-500" : "text-gray-800"
               }`}
@@ -81,7 +81,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/phone-number"
-              className={`text-center px-2 py-2 ${
+              className={`text-center px-2 py-2 text-sm ${
                 // Reduced padding
                 pathname === "/phone-number"
                   ? "text-yellow-500"
@@ -92,7 +92,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/contact"
-              className={`text-center px-2 py-2 ${
+              className={`text-center px-2 py-2 text-sm ${
                 // Reduced padding
                 pathname === "/contact" ? "text-yellow-500" : "text-gray-800"
               }`}
@@ -101,7 +101,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/what-next"
-              className="bg-pink-500 text-white px-2 py-2 rounded-full" // Adjusted padding
+              className="bg-pink-500 text-white px-2 py-2 rounded-full text-sm" // Adjusted padding
             >
               What Next?
             </Link>
@@ -119,7 +119,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-md">
+        <div className="md:hidden md:block bg-white">
           <div className="flex flex-col items-center space-y-2 py-3">
             <Link
               href="/"

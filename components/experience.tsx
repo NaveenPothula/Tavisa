@@ -1,18 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Process() {
+export default function Experience() {
   return (
-    <div className="py-6">
+    <div className="py-10">
       <h1 className="text-center text-2xl md:text-3xl font-bold mb-4">
-        Our Process
+        Your uinique Tavisa experience
       </h1>
       <div className="flex flex-col md:flex-row bg-white">
         {/* Block 1: Image */}
-        <div className="flex-1">
-          <div className="relative w-full h-[300px] md:h-[400px]">
+        <div className="flex-1 md:mr-6">
+          <div className="relative w-full h-[300px] md:h-[500px]">
             <Image
-              src="/about.png" // Replace with your image path
+              src="/experience.png" // Replace with your image path
               alt="Descriptive Alt Text"
               layout="fill"
               objectFit="cover" // Ensures the image covers the entire area
@@ -25,26 +25,33 @@ export default function Process() {
         <div className="flex-1 bg-white flex justify-center h-[300px] md:h-[400px]">
           <div className="text-left">
             <h2 className="text-2xl font-bold mb-4">
-              Holistic Menopause Treatment
+              Talk 1:1 with our consultant
             </h2>
+            <p className="mb-4">
+              Your Tavisa Doctor will review your medical history prior to your
+              visit. During the 30-minute virtual visit, you’ll share your
+              experience with menopause, your quality of life, and the symptoms
+              you’re experiencing.
+            </p>
             <h2 className="text-2xl font-bold mb-6 text-yellow-500">
-              Your menopause treatment should be as unique as you
+              Receive a menopause treatment plan custom for your needs & goals
             </h2>
+
             <p className="mb-4">
-              Our consultation programmes can be carried out online or
-              face-to-face at our clinic. With just a simple questionnaire to
-              complete, followed by an appointment with one of our Tavisa
-              consultants, you will be prescribed the blends and combinations of
-              herbal supplements that are perfectly suited to you.
+              Tavisa consultant will explain what’s happening in your body –
+              both physically and mentally – and then create a personalised care
+              plan for you.
             </p>
             <p className="mb-4">
-              We will send you what you need, when you need it.
+              Your plan may include: lifestyle changes in nutrition, fitness,
+              mindfulness, supplements, and more.
             </p>
+
             <Link
               href="/what-next"
               className="bg-pink-500 text-white px-2 py-2 rounded-full mx-auto" // Adjusted padding
             >
-              What Next?
+              What symptoms we treat?
             </Link>
           </div>
         </div>

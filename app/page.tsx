@@ -2,6 +2,8 @@ import About from "@/components/about";
 import Menopause from "@/components/menopause";
 import Assessment from "@/components/assessment";
 import Process from "@/components/process";
+import Experience from "@/components/experience";
+
 export default function Home() {
   return (
     <>
@@ -9,6 +11,7 @@ export default function Home() {
       <Menopause />
       <Assessment />
       <Process />
+      <Experience />
     </>
   );
 }

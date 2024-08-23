@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export default function Assessment() {
   return (
-    <div className="flex flex-col md:flex-row bg-white px-0">
+    <div className="flex flex-col md:flex-row bg-white px-0 py-5">
       {/* Block 1: Image */}
 
       {/* Block 2: Content */}
-      <div className="flex-1 bg-grey text-black px-0  h-[300px] md:h-[400px]">
+      <div className="flex-1 bg-grey text-black px-0  h-[300px] md:h-[400px] py-2 md:py-0">
         <div className="text-left py-0">
           <h2 className="text-2xl font-bold mb-4">
             Take our FREE Menopause Assessment for a menopause diagnosis
@@ -22,9 +22,11 @@ export default function Assessment() {
 
           <Link
             href="/what-next"
-            className="bg-pink-500 text-white px-2 py-2 rounded-full mt-6" // Adjusted padding
+            // Adjusted padding
           >
-            Take your free assessment now
+            <button className="bg-pink-500 text-white rounded-full px-2 py-2">
+              Take your free assessment now
+            </button>
           </Link>
         </div>
       </div>
