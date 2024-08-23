@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Navbar from "@/components/navbar";
+// Adjust the path if necessary
 import "./globals.css";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} bg-white px-4 md:px-10`}>
+        <Navbar />
+        <div className="py-9">{/* Add top padding to prevent overlap */}</div>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
