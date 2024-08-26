@@ -18,10 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} bg-white px-4 md:px-10`}>
+    <html lang="en" className="bg-white">
+      <body className={`${inter.className} px-4 md:px-10 box-border`}>
         <Navbar />
-        <div className="py-9">{/* Add top padding to prevent overlap */}</div>
+        <div className="py-10">{/* Add top padding to prevent overlap */}</div>
         {children}
         <Footer />
       </body>

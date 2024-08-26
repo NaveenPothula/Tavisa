@@ -1,6 +1,6 @@
 export default function Menopause() {
   return (
-    <div className="flex items-center justify-center bg-gray-100 p-4 py-10 bg-white">
+    <div className="flex items-center justify-center py-10 bg-white">
       <div className="w-full max-w-[80%] text-center">
         {/* Heading in Black */}
         <h1 className="text-3xl md:text-4xl font-bold text-black mb-4">

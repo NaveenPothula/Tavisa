@@ -3,17 +3,17 @@ import Link from "next/link";
 
 export default function Experience() {
   return (
-    <div className="py-10">
-      <h1 className="text-center text-2xl md:text-3xl font-bold mb-4">
+    <div className="py-10 bg-white">
+      <h1 className="text-center text-2xl md:text-3xl font-bold mb-4 text-black">
         Your uinique Tavisa experience
       </h1>
       <div className="flex flex-col md:flex-row bg-white">
         {/* Block 1: Image */}
         <div className="flex-1 md:mr-6">
-          <div className="relative w-full h-[300px] md:h-[500px]">
+          <div className="relative w-full min-h-[300px] md:min-h-[400px]">
             <Image
               src="/experience.png" // Replace with your image path
-              alt="Descriptive Alt Text"
+              alt="Descriptive Alternative text"
               layout="fill"
               objectFit="cover" // Ensures the image covers the entire area
               className="w-full h-full"
@@ -22,12 +22,12 @@ export default function Experience() {
         </div>
 
         {/* Block 2: Content */}
-        <div className="flex-1 bg-white flex justify-center h-[300px] md:h-[400px]">
+        <div className="flex-1 bg-white flex justify-center h-auto">
           <div className="text-left">
-            <h2 className="text-2xl font-bold mb-4">
+            <h2 className="text-2xl font-bold mb-4 text-black">
               Talk 1:1 with our consultant
             </h2>
-            <p className="mb-4">
+            <p className="mb-4 text-black">
               Your Tavisa Doctor will review your medical history prior to your
               visit. During the 30-minute virtual visit, you’ll share your
               experience with menopause, your quality of life, and the symptoms
@@ -37,12 +37,12 @@ export default function Experience() {
               Receive a menopause treatment plan custom for your needs & goals
             </h2>
 
-            <p className="mb-4">
+            <p className="mb-4 text-black">
               Tavisa consultant will explain what’s happening in your body –
               both physically and mentally – and then create a personalised care
               plan for you.
             </p>
-            <p className="mb-4">
+            <p className="mb-4 text-black">
               Your plan may include: lifestyle changes in nutrition, fitness,
               mindfulness, supplements, and more.
             </p>
