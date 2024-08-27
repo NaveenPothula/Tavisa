@@ -119,10 +119,11 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden md:block bg-white">
+        <div className="md:hidden bg-white">
           <div className="flex flex-col items-center space-y-2 py-3">
             <Link
               href="/"
+              onClick={() => setIsMenuOpen(false)}
               className={`block px-4 py-2 ${
                 pathname === "/" ? "text-yellow-500" : "text-gray-800"
               }`}
@@ -131,6 +132,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/who-are-we"
+              onClick={() => setIsMenuOpen(false)}
               className={`block px-4 py-2 ${
                 pathname === "/who-are-we" ? "text-yellow-500" : "text-gray-800"
               }`}
@@ -139,6 +141,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/symptoms"
+              onClick={() => setIsMenuOpen(false)}
               className={`block px-4 py-2 ${
                 pathname === "/symptoms" ? "text-yellow-500" : "text-gray-800"
               }`}
@@ -147,6 +150,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/how-we-treat"
+              onClick={() => setIsMenuOpen(false)}
               className={`block px-4 py-2 ${
                 pathname === "/how-we-treat"
                   ? "text-yellow-500"
@@ -157,6 +161,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/learn"
+              onClick={() => setIsMenuOpen(false)}
               className={`block px-4 py-2 ${
                 pathname === "/learn" ? "text-yellow-500" : "text-gray-800"
               }`}
@@ -165,6 +170,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/phone-number"
+              onClick={() => setIsMenuOpen(false)}
               className={`block px-4 py-2 ${
                 pathname === "/phone-number"
                   ? "text-yellow-500"
@@ -175,6 +181,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/contact"
+              onClick={() => setIsMenuOpen(false)}
               className={`block px-4 py-2 ${
                 pathname === "/contact" ? "text-yellow-500" : "text-gray-800"
               }`}
@@ -183,6 +190,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/what-next"
+              onClick={() => setIsMenuOpen(false)}
               className="block px-4 py-2 bg-pink-500 text-white rounded-full"
             >
               What Next?
