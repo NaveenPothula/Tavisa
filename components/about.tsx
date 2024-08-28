@@ -18,18 +18,18 @@ export default function About() {
       </div>
 
       {/* Block 2: Content */}
-      <div className="flex-1 bg-white text-black p-6 flex items-center justify-center h-[300px] md:h-[400px]">
+      <div className="flex-1 bg-white text-black md:p-6 pt-2 flex items-center justify-center h-[300px] md:h-[400px]">
         <div className="text-center">
-          <h2 className="text-2xl font-bold mb-4">
+          <h3 className="text-xl font-bold mb-4">
             Menopause affects every woman differently, hot flashes, mood swings,
             anxiety and weight gain can cause dread.
-          </h2>
+          </h3>
           <h3 className="text-xl font-semibold mb-6">
             So your treatment should be as unique as you!
           </h3>
           <Link
             href="/what-next"
-            className="bg-pink-500 text-white px-2 py-2 rounded-full" // Adjusted padding
+            className="bg-pink-500 text-white px-2 py-2 rounded-full hover:bg-blue-600" // Adjusted padding
           >
             What Next?
           </Link>

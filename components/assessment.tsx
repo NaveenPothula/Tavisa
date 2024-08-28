@@ -9,7 +9,7 @@ export default function Assessment() {
       {/* Block 2: Content */}
       <div className="flex-1 bg-grey text-black px-0  h-[300px] md:h-[400px] py-2 md:py-0">
         <div className="text-left py-0">
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 className="md:text-2xl text-xl font-bold mb-4">
             Take our FREE Menopause Assessment for a menopause diagnosis
           </h2>
           <p className="my-4">
@@ -24,7 +24,7 @@ export default function Assessment() {
             href="/what-next"
             // Adjusted padding
           >
-            <button className="bg-pink-500 text-white rounded-full px-2 py-2">
+            <button className="bg-pink-500 text-white rounded-full px-2 py-2 hover:bg-blue-600">
               Take your free assessment now
             </button>
           </Link>

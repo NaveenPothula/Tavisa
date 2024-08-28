@@ -73,7 +73,7 @@ const FAQ: React.FC = () => {
   return (
     <div className="w-full bg-white">
       {/* Heading */}
-      <h1 className="text-2xl font-bold text-center mb-6 text-black">
+      <h1 className="md:text-2xl text-xl font-bold text-center mb-6 text-black">
         Common Questions Asked About Menopause
       </h1>
 

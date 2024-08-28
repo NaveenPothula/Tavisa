@@ -38,24 +38,21 @@ export default function Footer() {
           <div className="flex-1">
             <h3 className="text-xl font-semibold mb-2">Pages</h3>
             <ul className="list-none p-0">
-              <li className="mb-2 text-sm">
-                <Link href="#">Who are we</Link>
+              <li className="mb-2 text-sm hover:text-blue-500">
+                <Link href="/who-are-we">Who are we</Link>
               </li>
-              <li className="mb-2 text-sm">
-                <Link href="#">Symptoms</Link>
+              <li className="mb-2 text-sm hover:text-blue-500">
+                <Link href="/symptoms">Symptoms</Link>
               </li>
-              <li className="mb-2 text-sm">
-                <Link href="#">How we treat</Link>
+              <li className="mb-2 text-sm hover:text-blue-500">
+                <Link href="/how-we-treat">How we treat</Link>
               </li>
-              <li className="mb-2 text-sm">
-                <Link href="#">Learn</Link>
+              <li className="mb-2 text-sm hover:text-blue-500">
+                <Link href="/learn">Learn</Link>
               </li>
 
-              <li className="mb-2 text-sm">
-                <Link href="#">Cookie Policy</Link>
-              </li>
-              <li className="mb-2 text-sm">
-                <Link href="#">contact Us</Link>
+              <li className="mb-2 text-sm hover:text-blue-500">
+                <Link href="/contact">Contact Us</Link>
               </li>
             </ul>
           </div>
@@ -64,11 +61,14 @@ export default function Footer() {
           <div className="flex-1">
             <h3 className="text-xl font-semibold mb-2">Privacy & Legal</h3>
             <ul className="list-none p-0">
-              <li className="mb-2 text-sm">
+              <li className="mb-2 text-sm hover:text-blue-500">
                 <Link href="#">Privacy Policy</Link>
               </li>
-              <li className="mb-2 text-sm">
+              <li className="mb-2 text-sm hover:text-blue-500">
                 <Link href="#">Terms & Conditions</Link>
+              </li>
+              <li className="mb-2 text-sm hover:text-blue-500">
+                <Link href="#">Cookie Policy</Link>
               </li>
             </ul>
           </div>
@@ -77,16 +77,16 @@ export default function Footer() {
           <div className="flex-1">
             <h3 className="text-xl font-semibold mb-2">Follow Us</h3>
             <ul className="list-none p-0">
-              <li className="mb-2 text-sm">
+              <li className="mb-2 text-sm hover:text-blue-500">
                 <Link href="#">X</Link>
               </li>
-              <li className="mb-2 text-sm">
+              <li className="mb-2 text-sm hover:text-blue-500">
                 <Link href="#">Facebook</Link>
               </li>
-              <li className="mb-2 text-sm">
+              <li className="mb-2 text-sm hover:text-blue-500">
                 <Link href="#">Instagram</Link>
               </li>
-              <li className="mb-2 text-sm">
+              <li className="mb-2 text-sm hover:text-blue-500">
                 <Link href="#">LinkedIn</Link>
               </li>
             </ul>

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function TreatDescription() {
   return (
-    <div className="flex items-center justify-center py-10 bg-white px-4">
+    <div className="flex items-center justify-center py-10 bg-white md:px-4">
       <div className="w-full  text-center">
         {/* Heading in Black */}
         <h1 className="text-2xl md:text-3xl font-bold text-black mb-4 bg-CB9904">
@@ -26,7 +26,7 @@ export default function TreatDescription() {
 
         <Link
           href="/what-next"
-          className="bg-pink-500 text-white px-4 py-2 rounded-full inline-block text-center"
+          className="bg-pink-500 text-white px-4 py-2 rounded-full inline-block text-center hover:bg-blue-600"
         >
           Take your free assessment now?
         </Link>

@@ -5,7 +5,7 @@ export default function Aim() {
   return (
     <div className="py-6 px-0 bg-white">
       {/* Main Heading */}
-      <h1 className="text-center text-3xl font-bold text-yellow-500 mb-6">
+      <h1 className="text-center md:text-3xl text-xl font-bold text-yellow-500 mb-6">
         Ayurveda’s aim is to bring the body into balance
       </h1>
 
@@ -74,7 +74,7 @@ export default function Aim() {
           <p className="text-gray-600">(dominated by earth and water)</p>
         </div>
       </div>
-      <Link href="/who-are-we" className="flex justify-center mb-4">
+      <Link href="/symptoms" className="flex justify-center mb-4">
         <button className="bg-pink-500 text-white px-6 py-2 rounded-full shadow-md hover:bg-blue-600">
           What symptoms we treat
         </button>

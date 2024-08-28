@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function SymptomsDescription() {
   return (
-    <div className="flex items-center justify-center py-10 bg-white px-4">
+    <div className="flex items-center justify-center py-10 bg-white md:px-4">
       <div className="w-full  text-center">
         {/* Heading in Black */}
         <h1 className="text-2xl md:text-3xl font-bold text-black mb-4 bg-CB9904">
@@ -16,7 +16,7 @@ export default function SymptomsDescription() {
         </p>
 
         {/* Heading in Yellow */}
-        <h2 className="text-2xl md:text-3xl font-bold text-yellow-500 mb-4">
+        <h2 className="text-xl md:text-3xl font-bold text-yellow-500 mb-4">
           1 in 100 will experience menopause under the age of 40
         </h2>
 
@@ -31,8 +31,8 @@ export default function SymptomsDescription() {
 
         {/* Text with Small Font */}
         <Link
-          href="/what-next"
-          className="bg-pink-500 text-white px-4 py-2 rounded-full inline-block text-center"
+          href="/symptoms"
+          className="bg-pink-500 text-white px-4 py-2 rounded-full inline-block text-center hover:bg-blue-600"
         >
           What symptoms we treat?
         </Link>

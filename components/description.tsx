@@ -1,7 +1,7 @@
 export default function Description() {
   return (
     <div className="flex items-center justify-center py-4 md:py-10 bg-white">
-      <div className="w-full max-w-[80%] text-center">
+      <div className="w-full md:max-w-[80%] md:text-center">
         <p className="text-base text-black mb-4">
           Tavisa provides holistic healthcare services using ancient principles
           of Ayurveda for women in all stages of life. It’s a natural way to

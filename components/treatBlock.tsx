@@ -38,7 +38,7 @@ export default function TreatBlock() {
           </div>
         </div>
       </div>
-      <p className="text-center md:px-10 text-black md:mt-10">
+      <p className="md:text-center md:px-10 text-black md:mt-10">
         At the end of the consultation, we provide a personalised care plan for
         each customer. The plan includes Herbal Supplements, a personalised
         diet, yoga and sometimes Panchakarma therapies to optimise the healing

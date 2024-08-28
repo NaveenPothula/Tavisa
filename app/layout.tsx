@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-white">
-      <body className={`${inter.className} px-4 md:px-10 box-border`}>
+      <body className={`${inter.className} px-4 md:px-10 text-black`}>
         <Navbar />
         <div className="py-10">{/* Add top padding to prevent overlap */}</div>
         {children}

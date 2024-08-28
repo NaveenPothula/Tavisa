@@ -1,45 +1,41 @@
-// components/ResponsiveImageText.js
+// components/ResponsiveBackgroundText.js
 
-import Image from "next/image";
+import React from "react";
 
-export default function ResponsiveImageText() {
+const HowWeTreat = () => {
   return (
-    <div className="relative w-full h-[300px] md:h-[400px] bg-white">
-      {/* Background image for larger screens */}
+    <div>
       <div
-        className="hidden md:block md:relative md:w-full md:h-full"
-        style={{
-          backgroundImage: `url(${"/mission.png"})`,
-          backgroundSize: "contain",
-          backgroundPosition: "center",
-        }}
+        className="relative w-full bg-cover md:bg-contain bg-center"
+        style={{ backgroundImage: "url('/mission.png')" }}
       >
-        {/* Overlay */}
-        <div className="absolute inset-0 opacity-0 bg-white"></div>
-
-        {/* Text positioned after 60% of the width */}
-        <div className="absolute top-1/2 left-[60%] transform -translate-y-1/2 text-black text-2xl font-bold">
-          Our mission is to help women in all stages of life, providing holistic
-          healthcare service and support
+        {/* Main container with responsive height */}
+        <div className="h-[300px] md:h-[400px] w-full relative">
+          {/* Text for medium (md) and large (lg) screens, starting after 60% width */}
+          <div className="hidden md:flex md:flex-col items-center justify-center absolute top-0 left-[60%] w-[40%] h-full items-center px-4">
+            <p className="text-2xl text-center font-bold">
+              Our mission is to help women in all stages of life, providing
+              holistic healthcare service and support
+            </p>
+          </div>
         </div>
-      </div>
 
-      {/* Image and text for smaller screens */}
-      <div className="block md:hidden relative">
-        <Image
-          src="/mission.png"
-          alt="Background Image"
-          width={500}
-          height={300}
-          layout="responsive"
-          objectFit="cover"
-          className="w-full h-[200px]"
-        />
-        <p className="mt-4 text-center text-xl font-semibold text-black">
-          Our mission is to help women in all stages of life, providing holistic
-          healthcare service and support
+        {/* Text for small (sm) screens, displayed below the image */}
+        {/* <div className="block md:hidden mt-4">
+        <p className="text-white text-xl">
+          This is the text content for small screens below the image.
         </p>
+      </div> */}
       </div>
+      <p className="text-black text-xl md:hidden text-center font-bold">
+        Our mission is to help women in all stages of life, providing holistic
+        healthcare service and support
+      </p>
+      {/* <p className="text-black text-xl md:hidden text-center font-bold">
+        44% of women experienced three or more severe symptoms
+      </p> */}
     </div>
   );
-}
+};
+
+export default HowWeTreat;

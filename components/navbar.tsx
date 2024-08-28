@@ -17,7 +17,7 @@ export default function Navbar() {
     <nav className="bg-white fixed inset-x-0 z-10 shadow-md px-4 md:px-10">
       <div className="container ml-0  py-2 flex items-center">
         {/* Logo */}
-        <div className="flex-shrink-0">
+        <Link href="/" className="flex-shrink-0">
           <Image
             src="/tavisa.png"
             alt="Logo"
@@ -25,7 +25,7 @@ export default function Navbar() {
             height={80}
             className="h-16 w-auto" // Ensure height is set properly
           />
-        </div>
+        </Link>
 
         {/* Navigation Links */}
         <div className="flex-grow flex items-center justify-between md:ml-6 mr-0">
@@ -79,7 +79,7 @@ export default function Navbar() {
             >
               Learn
             </Link>
-            <Link
+            {/* <Link
               href="/phone-number"
               className={`text-center px-2 py-2 text-sm ${
                 // Reduced padding
@@ -89,7 +89,7 @@ export default function Navbar() {
               }`}
             >
               PhoneNumber
-            </Link>
+            </Link> */}
             <Link
               href="/contact"
               className={`text-center px-2 py-2 text-sm ${
@@ -101,7 +101,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/what-next"
-              className="bg-pink-500 text-white px-2 py-2 rounded-full text-sm" // Adjusted padding
+              className="bg-pink-500 text-white px-2 py-2 rounded-full text-sm hover:bg-blue-600" // Adjusted padding
             >
               What Next?
             </Link>
@@ -168,7 +168,7 @@ export default function Navbar() {
             >
               Learn
             </Link>
-            <Link
+            {/* <Link
               href="/phone-number"
               onClick={() => setIsMenuOpen(false)}
               className={`block px-4 py-2 ${
@@ -178,7 +178,7 @@ export default function Navbar() {
               }`}
             >
               PhoneNumber
-            </Link>
+            </Link> */}
             <Link
               href="/contact"
               onClick={() => setIsMenuOpen(false)}
@@ -191,7 +191,7 @@ export default function Navbar() {
             <Link
               href="/what-next"
               onClick={() => setIsMenuOpen(false)}
-              className="block px-4 py-2 bg-pink-500 text-white rounded-full"
+              className="block px-4 py-2 bg-pink-500 text-white rounded-full hover:bg-blue-600"
             >
               What Next?
             </Link>

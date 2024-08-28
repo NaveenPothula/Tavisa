@@ -6,7 +6,7 @@ const AssessmentButton = () => {
     <div className="flex justify-center items-center mb-10 mt-10">
       <Link
         href="/what-next"
-        className="bg-pink-500 text-white px-4 py-2 rounded-full inline-block text-center"
+        className="bg-pink-500 text-white px-4 py-2 rounded-full inline-block text-center hover:bg-blue-600"
       >
         Take your free assessment now
       </Link>

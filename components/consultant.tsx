@@ -18,7 +18,7 @@ export default function Consultant() {
               className="w-full h-full"
             />
           </div>
-          <h2 className="text-center">Dr vani Moodley</h2>
+          <h2 className="text-center text-black">Dr vani Moodley</h2>
           <Link href="/who-are-we" className="flex justify-center mb-4">
             <button className="bg-pink-500 text-white px-6 py-2 rounded-full shadow-md hover:bg-blue-600">
               Take your free assessment now

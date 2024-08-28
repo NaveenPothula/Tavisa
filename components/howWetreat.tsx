@@ -27,11 +27,11 @@ const HowWeTreat = () => {
       </div> */}
       </div>
       <p className="text-black text-xl md:hidden text-center font-bold">
-        Symptoms are experienced differently for each woman.
+        Your treatment should be as unique as you.
       </p>
-      <p className="text-black text-xl md:hidden text-center font-bold">
+      {/* <p className="text-black text-xl md:hidden text-center font-bold">
         44% of women experienced three or more severe symptoms
-      </p>
+      </p> */}
     </div>
   );
 };

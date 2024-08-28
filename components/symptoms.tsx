@@ -13,10 +13,10 @@ const ResponsiveBackgroundText = () => {
         <div className="h-[300px] md:h-[400px] w-full relative">
           {/* Text for medium (md) and large (lg) screens, starting after 60% width */}
           <div className="hidden md:flex md:flex-col items-center justify-center absolute top-0 left-[60%] w-[40%] h-full items-center px-4">
-            <p className="text-white text-xl text-center">
+            <p className=" text-xl text-center">
               Symptoms are experienced differently for each woman.
             </p>
-            <p className="text-white text-xl text-center">
+            <p className=" text-xl text-center">
               44% of women experienced three or more severe symptoms
             </p>
           </div>
