@@ -6,7 +6,7 @@ const HowWeTreat = () => {
   return (
     <div>
       <div
-        className="relative w-full bg-cover md:bg-contain bg-center"
+        className="relative w-full bg-cover"
         style={{ backgroundImage: "url('/treat.png')" }}
       >
         {/* Main container with responsive height */}

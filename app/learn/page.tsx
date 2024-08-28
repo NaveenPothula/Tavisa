@@ -1,7 +1,9 @@
+import Learn from "@/components/learn";
+
 export default function Home() {
   return (
     <>
-      <h2>Hello</h2>
+      <Learn />
     </>
   );
 }

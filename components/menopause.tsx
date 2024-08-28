@@ -3,12 +3,12 @@ export default function Menopause() {
     <div className="flex items-center justify-center py-10 bg-white">
       <div className="w-full text-center">
         {/* Heading in Black */}
-        <h1 className="text-2xl md:text-4xl font-bold text-black mb-4">
+        <h1 className="text-2xl md:text-3xl font-bold text-black mb-4">
           Menopause Treatment
         </h1>
 
         {/* Heading in Yellow */}
-        <h2 className="text-xl md:text-3xl font-bold text-yellow-500 mb-4">
+        <h2 className="text-xl md:text-2xl font-bold text-yellow-500 mb-4">
           Welcome to the Integrated Holistic Care for Menopause
         </h2>
 

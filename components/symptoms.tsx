@@ -6,7 +6,7 @@ const ResponsiveBackgroundText = () => {
   return (
     <div>
       <div
-        className="relative w-full bg-cover md:bg-cover bg-center"
+        className="relative w-full bg-cover"
         style={{ backgroundImage: "url('/symptoms.png')" }}
       >
         {/* Main container with responsive height */}
