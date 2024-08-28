@@ -47,7 +47,7 @@ const HowWeTreat = () => {
         </p>
         <Link
           href="/what-next"
-          className="bg-pink-500 text-white px-2 py-2 rounded-full hover:bg-blue-600" // Adjusted padding
+          className="bg-pink-500 text-white px-2 py-2 rounded-full hover:bg-blue-600 mt-2" // Adjusted padding
         >
           What Next?
         </Link>
