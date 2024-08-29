@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Experience() {
   return (
     <div className="md:py-6 pb-3 bg-white">
-      <h1 className="text-center text-2xl md:text-3xl font-bold mb-2 text-black">
+      <h1 className="text-center text-2xl md:text-3xl font-bold md:mb-4 text-black">
         Your unique Tavisa experience
       </h1>
       <div className="flex flex-col md:flex-row bg-white">

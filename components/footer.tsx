@@ -40,7 +40,7 @@ export default function Footer({
       <div className="flex flex-col md:flex-row justify-around items-start gap-8 mb-8">
         {/* Section 1: Logo and Paragraph */}
         <div className="flex-1">
-          <div className="mb-4">
+          <Link href="/" className="mb-4">
             <Image
               src={footerLogo}
               alt="Logo"
@@ -49,7 +49,7 @@ export default function Footer({
               className="w-[100]px h-[40]px"
             />
             {/* Increased logo size */}
-          </div>
+          </Link>
           <h6 className="text-sm px-6">
             Our Care Team is ready to help answer your questions.
           </h6>
