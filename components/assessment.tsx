@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Assessment() {
   return (
-    <div className="flex flex-col md:flex-row bg-white px-0 py-5">
+    <div className="flex flex-col md:flex-row bg-white px-0 md:py-5 py-2">
       {/* Block 1: Image */}
 
       {/* Block 2: Content */}
@@ -24,7 +24,7 @@ export default function Assessment() {
             href="/what-next"
             // Adjusted padding
           >
-            <button className="bg-pink-500 text-white rounded-full px-2 py-2 hover:bg-blue-600">
+            <button className="bg-pink-500 text-white rounded-full px-2 py-2 hover:bg-blue-600 mb-2">
               Take your free assessment now
             </button>
           </Link>

@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Consultant() {
   return (
-    <div className="py-10 bg-white">
-      <h1 className="text-center text-2xl md:text-3xl font-bold mb-4 text-black">
+    <div className="md:py-6 py-4 bg-white">
+      <h1 className="text-center text-2xl md:text-3xl font-bold md:mb-4 text-black">
         Meet your consultant
       </h1>
       <div className="flex flex-col md:flex-row bg-white">
@@ -18,7 +18,7 @@ export default function Consultant() {
               className="w-full h-full"
             />
           </div>
-          <h2 className="text-center text-black">Dr vani Moodley</h2>
+          <h2 className="text-center text-black mb-2">Dr vani Moodley</h2>
           <Link href="/who-are-we" className="flex justify-center mb-4">
             <button className="bg-pink-500 text-white px-6 py-2 rounded-full shadow-md hover:bg-blue-600">
               Take your free assessment now
@@ -42,7 +42,7 @@ export default function Consultant() {
               internships in India’s top Ayurvedic Hospitals, she also holds a
               PhD in Pancha Karma.
             </p>
-            <p className="mb-4 text-black">
+            <p className="md:mb-6 text-black">
               As a member of the British Ayurvedic Medical Association’s
               executive committee, her holistic approach complements modern
               medicine, providing personalised treatment plans. Experience

@@ -29,10 +29,10 @@ const ResponsiveBackgroundText = () => {
         </p>
       </div> */}
       </div>
-      <p className="text-black text-xl md:hidden text-center font-bold">
+      <p className="text-black text-xl md:hidden text-center font-semibold">
         Symptoms are experienced differently for each woman.
       </p>
-      <p className="text-black text-xl md:hidden text-center font-bold">
+      <p className="text-black text-xl md:hidden text-center font-semibold">
         44% of women experienced three or more severe symptoms
       </p>
     </div>

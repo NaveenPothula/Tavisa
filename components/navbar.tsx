@@ -1,17 +1,46 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaBars, FaTimes } from "react-icons/fa"; // Importing React Icons
+import { FaBars, FaTimes } from "react-icons/fa";
+import Logo from "./logo";
 
-export default function Navbar() {
+interface NavbarProps {
+  headerLogo: string;
+}
+
+export default function Navbar({ headerLogo }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
+  // const [data, setData] = useState(null);
+
+  // const fetchdata = async () => {
+  //   const res = await fetch("https://pulseayur-api.onrender.com/api/config", {
+  //     cache: "no-cache",
+  //   });
+  //   const data = await res.json();
+  //   return data;
+  // };
+
+  // useEffect(() => {
+  //   const asyncFunction = async () => {
+  //     console.log("fetched");
+  //     const res = await fetchdata();
+  //     setData(res.result);
+  //   };
+
+  //   asyncFunction();
+  // }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  // if (!data) {
+  //   return <h1>loading</h1>;
+  // }
 
   return (
     <nav className="bg-white fixed inset-x-0 z-10 shadow-md px-4 md:px-10">
@@ -19,13 +48,14 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
-            src="/tavisa.png"
+            src={headerLogo}
             alt="Logo"
             width={250}
             height={80}
             className="h-16 w-auto" // Ensure height is set properly
           />
         </Link>
+        {/* <Logo /> */}
 
         {/* Navigation Links */}
         <div className="flex-grow flex items-center justify-between md:ml-6 mr-0">

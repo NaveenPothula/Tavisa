@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Ayurveda() {
   return (
-    <div className="py-10 bg-white">
+    <div className=" pb-6 bg-white">
       <h1 className="text-center text-2xl md:text-3xl font-bold mb-4 text-black">
         About Ayurveda
       </h1>
