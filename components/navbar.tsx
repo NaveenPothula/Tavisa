@@ -21,7 +21,7 @@ export default function Navbar({ headerLogo }: NavbarProps) {
 
   return (
     <nav className="bg-white fixed inset-x-0 z-10 shadow-md px-4 md:px-10 w-full">
-      <div className="ml-0  py-2 flex items-center lg:gap-4 justify-center w-full">
+      <div className="ml-0  py-1 flex items-center lg:gap-4 justify-center w-full">
         <div className="flex-shrink-0">
           <Link href="/">
             <Image
@@ -69,7 +69,7 @@ export default function Navbar({ headerLogo }: NavbarProps) {
             Learn
           </Link>
         </div>
-        <div className=" hidden md:flex flex-row lg:gap-10 justify-between items-center gap-4">
+        <div className=" hidden md:flex flex-row lg:gap-10 justify-between items-center gap-2">
           <Link
             href="/shop"
             className="bg-pink-500 text-white px-2 py-2 rounded-full text-xs hover:bg-blue-600" // Adjusted padding
@@ -90,12 +90,11 @@ export default function Navbar({ headerLogo }: NavbarProps) {
           </Link>
         </div>
         {/* </div> */}
-        <button
-          onClick={toggleMenu}
-          className="md:hidden text-gray-800 ml-auto"
-        >
-          {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-        </button>
+        <div className="md:hidden text-gray-800 ml-auto">
+          <button onClick={toggleMenu}>
+            {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </button>
+        </div>
       </div>
 
       {isMenuOpen && (
