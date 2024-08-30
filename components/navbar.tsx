@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaUser, FaShoppingCart } from "react-icons/fa";
 import Logo from "./logo";
 
 interface NavbarProps {
@@ -14,67 +14,29 @@ interface NavbarProps {
 export default function Navbar({ headerLogo }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-  // const [data, setData] = useState(null);
-
-  // const fetchdata = async () => {
-  //   const res = await fetch("https://pulseayur-api.onrender.com/api/config", {
-  //     cache: "no-cache",
-  //   });
-  //   const data = await res.json();
-  //   return data;
-  // };
-
-  // useEffect(() => {
-  //   const asyncFunction = async () => {
-  //     console.log("fetched");
-  //     const res = await fetchdata();
-  //     setData(res.result);
-  //   };
-
-  //   asyncFunction();
-  // }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // if (!data) {
-  //   return <h1>loading</h1>;
-  // }
-
   return (
     <nav className="bg-white fixed inset-x-0 z-10 shadow-md px-4 md:px-10">
-      <div className="container ml-0  py-2 flex items-center">
-        {/* Logo */}
+      <div className="container ml-0  py-2 flex items-center gap-4 justify-center">
         <Link href="/" className="flex-shrink-0">
           <Image
             src={headerLogo}
             alt="Logo"
             width={250}
             height={80}
-            className="h-16 w-auto" // Ensure height is set properly
+            className="h-16 w-auto"
           />
         </Link>
-        {/* <Logo /> */}
 
-        {/* Navigation Links */}
-        <div className="flex-grow flex items-center justify-between md:ml-6 mr-0">
-          <div className="hidden md:flex flex-1 items-center justify-between px-0">
-            {" "}
-            {/* Reduced space between links */}
-            <Link
-              href="/"
-              className={`text-center text-sm px-2 py-2 ${
-                // Reduced padding
-                pathname === "/" ? "text-yellow-500" : "text-gray-800"
-              }`}
-            >
-              Home
-            </Link>
+        <div className="hidden md:flex flex-grow flex items-center justify-between mr-0 gap-10">
+          <div className=" md:flex flex-1 items-center justify-between px-0 gap-4">
             <Link
               href="/who-are-we"
               className={`text-center px-2 py-2 text-sm ${
-                // Reduced padding
                 pathname === "/who-are-we" ? "text-yellow-500" : "text-gray-800"
               }`}
             >
@@ -83,7 +45,6 @@ export default function Navbar({ headerLogo }: NavbarProps) {
             <Link
               href="/symptoms"
               className={`text-center px-2 py-2 text-sm ${
-                // Reduced padding
                 pathname === "/symptoms" ? "text-yellow-500" : "text-gray-800"
               }`}
             >
@@ -92,7 +53,6 @@ export default function Navbar({ headerLogo }: NavbarProps) {
             <Link
               href="/how-we-treat"
               className={`text-center px-2 py-2 text-sm ${
-                // Reduced padding
                 pathname === "/how-we-treat"
                   ? "text-yellow-500"
                   : "text-gray-800"
@@ -103,51 +63,41 @@ export default function Navbar({ headerLogo }: NavbarProps) {
             <Link
               href="/learn"
               className={`text-center px-2 py-2 text-sm ${
-                // Reduced padding
                 pathname === "/learn" ? "text-yellow-500" : "text-gray-800"
               }`}
             >
               Learn
             </Link>
-            {/* <Link
-              href="/phone-number"
-              className={`text-center px-2 py-2 text-sm ${
-                // Reduced padding
-                pathname === "/phone-number"
-                  ? "text-yellow-500"
-                  : "text-gray-800"
-              }`}
-            >
-              PhoneNumber
-            </Link> */}
+          </div>
+          <div className=" hidden md:flex flex-row gap-10 justify-between items-center">
             <Link
-              href="/contact"
-              className={`text-center px-2 py-2 text-sm ${
-                // Reduced padding
-                pathname === "/contact" ? "text-yellow-500" : "text-gray-800"
-              }`}
+              href="/shop"
+              className="bg-pink-500 text-white px-2 py-2 rounded-full text-xs hover:bg-blue-600" // Adjusted padding
             >
-              Contact
+              Shop
             </Link>
             <Link
-              href="/what-next"
+              href="/#"
               className="bg-pink-500 text-white px-2 py-2 rounded-full text-sm hover:bg-blue-600" // Adjusted padding
             >
-              What Next?
+              <FaUser />
+            </Link>
+            <Link
+              href="/#"
+              className="bg-pink-500 text-white px-2 py-2 rounded-full text-sm hover:bg-blue-600" // Adjusted padding
+            >
+              <FaShoppingCart />
             </Link>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="md:hidden text-gray-800 ml-auto"
-          >
-            {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-          </button>
         </div>
+        <button
+          onClick={toggleMenu}
+          className="md:hidden text-gray-800 ml-auto"
+        >
+          {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </button>
       </div>
 
-      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white">
           <div className="flex flex-col items-center space-y-2 py-3">
@@ -198,32 +148,33 @@ export default function Navbar({ headerLogo }: NavbarProps) {
             >
               Learn
             </Link>
-            {/* <Link
-              href="/phone-number"
-              onClick={() => setIsMenuOpen(false)}
-              className={`block px-4 py-2 ${
-                pathname === "/phone-number"
-                  ? "text-yellow-500"
-                  : "text-gray-800"
-              }`}
-            >
-              PhoneNumber
-            </Link> */}
+
             <Link
-              href="/contact"
+              href="/shop"
               onClick={() => setIsMenuOpen(false)}
               className={`block px-4 py-2 ${
                 pathname === "/contact" ? "text-yellow-500" : "text-gray-800"
               }`}
             >
-              Contact
+              Shop
             </Link>
             <Link
-              href="/what-next"
+              href="/#"
               onClick={() => setIsMenuOpen(false)}
-              className="block px-4 py-2 bg-pink-500 text-white rounded-full hover:bg-blue-600"
+              className={`block px-4 py-2 ${
+                pathname === "/contact" ? "text-yellow-500" : "text-gray-800"
+              }`}
             >
-              What Next?
+              User Profile
+            </Link>
+            <Link
+              href="/#"
+              onClick={() => setIsMenuOpen(false)}
+              className={`block px-4 py-2 ${
+                pathname === "/contact" ? "text-yellow-500" : "text-gray-800"
+              }`}
+            >
+              Cart
             </Link>
           </div>
         </div>
