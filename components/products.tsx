@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 // Define a type for the product
 type Product = {
@@ -151,13 +152,15 @@ const Products: React.FC = () => {
             key={product.id}
             className="border rounded-lg flex flex-col items-start"
           >
-            <Image
-              src={product.image}
-              alt={product.name}
-              width={150}
-              height={150}
-              className="w-full h-40 object-cover mb-2"
-            />
+            <Link href={`/shop/${product.id}`}>
+              <Image
+                src={product.image}
+                alt={product.name}
+                width={150}
+                height={150}
+                className="w-full h-40 object-cover mb-2"
+              />
+            </Link>
             <h2 className="text-lg font-semibold mb-2 ml-1">{product.name}</h2>
             <p className="text-gray-600 mb-2 ml-1">
               £{product.price.toFixed(2)}
