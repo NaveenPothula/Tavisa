@@ -58,7 +58,7 @@ const Product = async ({ params }: { params: { id: string } }) => {
               alt={product.name}
               width={500}
               height={500}
-              className="w-full h-auto object-cover"
+              className="w-full h-80 object-cover"
             />
           </div>
         )}
@@ -68,7 +68,7 @@ const Product = async ({ params }: { params: { id: string } }) => {
           <h1 className="text-2xl font-bold mb-4 text-black">{product.name}</h1>
           <p className="text-black  mb-4">{product.description}</p>
           <p className="text-xl text-black font-semibold mb-4">
-            ${product.price}
+            £{product.price}
           </p>
           <QuantityInput />
         </div>

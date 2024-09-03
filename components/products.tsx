@@ -150,14 +150,16 @@ const Products: React.FC = () => {
         {currentProducts.map((product) => (
           <div
             key={product.id}
-            className="border rounded-lg flex flex-col items-start"
+            className="rounded-lg flex flex-col items-start w-full"
           >
-            <Link href={`/shop/${product.id}`}>
+            <Link
+              href={`/shop/${product.id}`}
+              className="relative w-full h-40 sm:h-40 md:h-50 mb-2"
+            >
               <Image
                 src={product.image}
                 alt={product.name}
-                width={150}
-                height={150}
+                layout="fill"
                 className="w-full h-40 object-cover mb-2"
               />
             </Link>

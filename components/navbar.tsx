@@ -83,7 +83,7 @@ export default function Navbar({ headerLogo }: NavbarProps) {
             <FaUser />
           </Link>
           <Link
-            href="/#"
+            href="/cart"
             className="bg-pink-500 text-white px-2 py-2 rounded-full text-sm hover:bg-blue-600" // Adjusted padding
           >
             <FaShoppingCart />
@@ -167,7 +167,7 @@ export default function Navbar({ headerLogo }: NavbarProps) {
               User Profile
             </Link>
             <Link
-              href="/#"
+              href="/cart"
               onClick={() => setIsMenuOpen(false)}
               className={`block px-4 py-2 ${
                 pathname === "/contact" ? "text-yellow-500" : "text-gray-800"
