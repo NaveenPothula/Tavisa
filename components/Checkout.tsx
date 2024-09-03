@@ -11,7 +11,7 @@ const CheckoutPage: React.FC = () => {
   const [cartItems, setCartItems] = useState([
     {
       id: 1,
-      name: "Product 1",
+      name: "Product 1 is the product name",
       price: 50,
       vat: 5,
       quantity: 2,
@@ -20,25 +20,7 @@ const CheckoutPage: React.FC = () => {
     },
     {
       id: 2,
-      name: "Product 2",
-      price: 30,
-      vat: 3,
-      quantity: 1,
-      image:
-        "https://res.cloudinary.com/duqbmh63s/image/upload/v1721714543/smellica/product/bcs3iykwvlsqrlrczyhu.jpg",
-    },
-    {
-      id: 3,
-      name: "Product 2",
-      price: 30,
-      vat: 3,
-      quantity: 1,
-      image:
-        "https://res.cloudinary.com/duqbmh63s/image/upload/v1721714543/smellica/product/bcs3iykwvlsqrlrczyhu.jpg",
-    },
-    {
-      id: 4,
-      name: "Product 2",
+      name: "Product 2 is the product name",
       price: 30,
       vat: 3,
       quantity: 1,
@@ -119,9 +101,9 @@ const CheckoutPage: React.FC = () => {
       </div>
 
       {/* Main Content */}
-      <div className="flex flex-col md:flex-row gap-4">
+      <div className="md:flex md:flex-row gap-4 w-full">
         {/* Address Block */}
-        <div className="w-full md:w-[60%] border p-2 md:p-4 rounded-lg shadow-lg h-auto">
+        <div className="w-full md:w-3/5 border p-2 md:p-4 rounded-lg shadow-lg">
           <h2 className="text-xl font-bold mb-4">Shipping Address</h2>
           <form className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -272,15 +254,15 @@ const CheckoutPage: React.FC = () => {
         </div>
 
         {/* Order Summary Block */}
-        <div className="w-full md:w-[40%] border rounded-lg md:p-2">
+        <div className="w-full md:w-2/5 border rounded-lg md:p-2">
           <h2 className="text-xl font-bold mb-2">Order Summary</h2>
           {/* Cart Items */}
           {cartItems.map((item) => (
             <div
               key={item.id}
-              className="flex flex-row border-b border-gray-200 px-2 mb-1 lg:justify-around  gap-4 flex-wrap"
+              className="flex flex-row border-b border-gray-200 px-2 mb-1 lg:justify-start  gap-4 flex-wrap"
             >
-              <div className="flex items-center mb-2">
+              <div className="flex items-start mb-2">
                 <Image
                   src={item.image}
                   alt={item.name}
@@ -288,30 +270,31 @@ const CheckoutPage: React.FC = () => {
                   height={150}
                   className="mr-4"
                 />
-              </div>
-              <div className="flex flex-col justify-start items-start px-0">
-                <h2 className="mb-2 ">{item.name}</h2>
-                <div className="flex items-center">
+
+                <div className="flex flex-col justify-start items-start">
+                  <h2 className="mb-2 ">{item.name}</h2>
+                  <div className="flex items-center">
+                    <button
+                      onClick={() => handleDecreaseQuantity(item.id)}
+                      className="px-2 py-1 text-white bg-gray-800 mb-2"
+                    >
+                      -
+                    </button>
+                    <span className="px-2">{item.quantity}</span>
+                    <button
+                      onClick={() => handleIncreaseQuantity(item.id)}
+                      className="px-2 py-1 text-white bg-gray-800 mb-2"
+                    >
+                      +
+                    </button>
+                  </div>
                   <button
-                    onClick={() => handleDecreaseQuantity(item.id)}
-                    className="px-2 py-1 text-white bg-gray-800 mb-2"
+                    onClick={() => handleRemoveItem(item.id)}
+                    className="text-white px-2 py-0 bg-red-500 rounded text-sm py-1"
                   >
-                    -
-                  </button>
-                  <span className="px-2">{item.quantity}</span>
-                  <button
-                    onClick={() => handleIncreaseQuantity(item.id)}
-                    className="px-2 py-1 text-white bg-gray-800 mb-2"
-                  >
-                    +
+                    Remove
                   </button>
                 </div>
-                <button
-                  onClick={() => handleRemoveItem(item.id)}
-                  className="text-white px-2 py-0 bg-red-500 rounded text-sm py-1"
-                >
-                  Remove
-                </button>
               </div>
 
               <div className="flex justify-between flex-col">
